@@ -15,7 +15,7 @@ def get_pipeline(model_name):
     
     if "logistic_regression" in model_name:
         steps.append(
-            ('logistic', LogisticRegression(max_iter=1000, random_state=42))
+            ('logistic', LogisticRegression(max_iter=10000, random_state=42))
         )
     elif "knn" in model_name:
         steps.append(
