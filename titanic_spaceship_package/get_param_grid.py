@@ -1,6 +1,6 @@
-from code_project.param_grid.logistic_regression__v01 import param_grid_logistic_regression__v01
-from code_project.param_grid.knn__v01 import param_grid_knn__v01
-from code_project.param_grid.svm__01 import param_grid_svm__01
+from titanic_spaceship_package.param_grids.logistic_regression__v01 import param_grid_logistic_regression__v01
+from titanic_spaceship_package.param_grids.knn__v01 import param_grid_knn__v01
+from titanic_spaceship_package.param_grids.svm__v01 import param_grid_svm__v01
 
 def get_param_grid(model_name):
     

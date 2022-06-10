@@ -1,7 +1,8 @@
+from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from code_project.preprocessor import preprocessor
+from titanic_spaceship_package.preprocessor import preprocessor
 
 def get_pipeline(model_name):
     
@@ -12,7 +13,7 @@ def get_pipeline(model_name):
     else:
         raise NotImplementedError
     
-    if "logistic_regression" in model:
+    if "logistic_regression" in model_name:
         steps.append(
             ('logistic', LogisticRegression(max_iter=1000, random_state=42))
         )

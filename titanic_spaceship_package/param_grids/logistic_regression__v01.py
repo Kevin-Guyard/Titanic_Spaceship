@@ -1,3 +1,5 @@
+import numpy as np
+
 param_grid_logistic_regression__v01 = [
     {
         "logistic__solver": ["liblinear"],

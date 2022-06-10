@@ -5,6 +5,7 @@ from sklearn.preprocessing import PowerTransformer
 from sklearn.impute import SimpleImputer
 from sklearn.compose import ColumnTransformer
 from sklearn.preprocessing import OneHotEncoder
+import numpy as np
 
 features_1 = ["RoomService", "FoodCourt", "ShoppingMall", "Spa", "VRDeck"]
 features_2 = ["Age"]
