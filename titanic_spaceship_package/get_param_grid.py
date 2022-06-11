@@ -1,24 +1,42 @@
-from titanic_spaceship_package.param_grids.logistic_regression__v01 import param_grid_logistic_regression__v01
-from titanic_spaceship_package.param_grids.knn__v01 import param_grid_knn__v01
-from titanic_spaceship_package.param_grids.svm__v01 import param_grid_svm__v01
-from titanic_spaceship_package.param_grids.logistic_regression__v02 import param_grid_logistic_regression__v02
-from titanic_spaceship_package.param_grids.knn__v02 import param_grid_knn__v02
-from titanic_spaceship_package.param_grids.svm__v02 import param_grid_svm__v02
+from titanic_spaceship_package.param_grids.logistic_regression__basic import param_grid_logistic_regression__basic
+from titanic_spaceship_package.param_grids.knn__basic import param_grid_knn__basic
+from titanic_spaceship_package.param_grids.svm__basic import param_grid_svm__basic
+from titanic_spaceship_package.param_grids.logistic_regression__feature_selection import param_grid_logistic_regression__feature_selection
+from titanic_spaceship_package.param_grids.knn__feature_selection import param_grid_knn__feature_selection
+from titanic_spaceship_package.param_grids.svm__feature_selection import param_grid_svm__feature_selection
 
 def get_param_grid(model_name):
     
-    if model_name == "logistic_regression__v01":
-        param_grid = param_grid_logistic_regression__v01
-    elif model_name == "knn__v01":
-        param_grid = param_grid_knn__v01
-    elif model_name == "svm__v01":
-        param_grid = param_grid_svm__v01
-    elif model_name == "logistic_regression__v02":
-        param_grid = param_grid_logistic_regression__v02
-    elif model_name == "knn__v02":
-        param_grid = param_grid_knn__v02
-    elif model_name == "svm__v02":
-        param_grid = param_grid_svm__v02
+    type_model = model_name.split("__v")[0]
+    version = model_name.split("__v")[1]
+    
+    if type_model == "logistic_regression":
+        
+        if version in ["01"]:
+            param_grid = param_grid_logistic_regression__basic
+        elif version in ["02"]:
+            param_grid = param_grid_logistic_regression__feature_selection
+        else:
+            raise NotImplementedError
+            
+    elif type_model == "knn":
+        
+        if version in ["01"]:
+            param_grid = param_grid_knn__basic
+        elif version in ["02"]:
+            param_grid = param_grid_knn__feature_selection
+        else:
+            raise NotImplementedError
+            
+    elif type_model == "svm":
+        
+        if version in ["01"]:
+            param_grid = param_grid_svm__basic
+        elif version in ["02"]:
+            param_grid = param_grid_svm__feature_selection
+        else:
+            raise NotImplementedError
+            
     else:
         raise NotImplementedError
     

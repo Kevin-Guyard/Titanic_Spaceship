@@ -19,7 +19,7 @@ def hyperparameters_tuning(pipeline, param_grid, model_name, repo_model, X_train
         "model_name": model_name,
         "best_score": clf.best_score_,
         "best_params": clf.best_params_,
-        "time_to_tune": sum(clf.cv_results_['mean_fit_time'] * clf.cv),
+        "time_to_tune": sum(clf.cv_results_["mean_fit_time"] + clf.cv_results_["mean_score_time"]) * clf.cv,
     }
     
     with open(os.path.join(repo_model, model_name + ".json"), "w+") as file:

@@ -8,27 +8,35 @@ from titanic_spaceship_package.preprocessor import preprocessor
 
 def get_pipeline(model_name):
     
-    if model_name.split("__v")[1] == "01":
+    type_model = model_name.split("__v")[0]
+    version = model_name.split("__v")[1]
+    
+    if version in ["01"]:
+        
         steps = [
             ('preprocessor', preprocessor),
         ]
-    elif model_name.split("__v")[1] == "02":
+        
+    elif version in ["02"]:
+        
         steps = [
             ('preprocessor', preprocessor),
             ('feature_selection', SelectKBest(score_func=f_classif))
         ]
+        
     else:
         raise NotImplementedError
+
     
-    if "logistic_regression" in model_name:
+    if type_model == "logistic_regression":
         steps.append(
             ('logistic', LogisticRegression(max_iter=10000, random_state=42))
         )
-    elif "knn" in model_name:
+    elif type_model == "knn":
         steps.append(
             ('knn', KNeighborsClassifier())
         )
-    elif "svm" in model_name:
+    elif type_model == "svm":
         steps.append(
             ('svm', SVC(random_state=42))
         )

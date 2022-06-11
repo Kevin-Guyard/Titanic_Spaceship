@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --partition=shared-cpu
-#SBATCH --time=01:10:00
+#SBATCH --time=00:18:00
 #SBATCH --mem-per-cpu=5000
 
 module load GCCcore/11.2.0 Python/3.9.6
