@@ -13,13 +13,9 @@ MODEL_NAME = sys.argv[1]
 X_train = pd.read_csv(os.path.join(REPO_DATA_PREPROCESSED, "X_train.csv"))
 y_train = pd.read_csv(os.path.join(REPO_DATA_PREPROCESSED, "y_train.csv")).Transported
 
-pipeline = get_pipeline(
-    model_name=MODEL_NAME
-)
+pipeline = get_pipeline(model_name=MODEL_NAME, X_train=X_train, y_train=y_train)
 
-param_grid = get_param_grid(
-    model_name=MODEL_NAME
-)
+param_grid = get_param_grid(model_name=MODEL_NAME)
 
 hyperparameters_tuning(
     pipeline=pipeline,

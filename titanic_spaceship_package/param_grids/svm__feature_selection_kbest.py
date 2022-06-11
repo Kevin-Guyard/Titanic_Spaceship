@@ -1,6 +1,6 @@
 import numpy as np
 
-param_grid_svm__feature_selection = [
+param_grid_svm__feature_selection_kbest = [
     {
         "svm__C": list(np.logspace(-2, 2, 13)), 
         "svm__kernel": ["linear", "rbf", "sigmoid"],

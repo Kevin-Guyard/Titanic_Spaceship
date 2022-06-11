@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#SBATCH --job-name=logistic_regression__v05
-#SBATCH --output=logistic_regression__v05-out
+#SBATCH --job-name=logistic_regression__v09
+#SBATCH --output=logistic_regression__v09-out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --partition=shared-cpu
@@ -10,4 +10,4 @@
 
 module load GCCcore/11.2.0 Python/3.9.6
 pip install -r titanic_spaceship_package/requirements.txt
-python script_tuning.py logistic_regression__v05
+python script_tuning.py logistic_regression__v09
