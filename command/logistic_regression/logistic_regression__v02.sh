@@ -1,6 +1,7 @@
 #!/bin/sh
 
 #SBATCH --job-name=logistic_regression__v02
+#SBATCH --output=logistic_regression__v02-out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
 #SBATCH --partition=shared-cpu

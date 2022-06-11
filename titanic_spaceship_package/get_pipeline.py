@@ -2,9 +2,9 @@ from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import SVC
-from sklearn.feature_selection import SelectKBest
-from sklearn.feature_selection import f_classif
+from sklearn.feature_selection import SelectKBest, f_classif, mutual_info_classif
 from titanic_spaceship_package.preprocessor import preprocessor
+from functools import partial
 
 def get_pipeline(model_name):
     
@@ -23,11 +23,18 @@ def get_pipeline(model_name):
             ('preprocessor', preprocessor),
             ('feature_selection', SelectKBest(score_func=f_classif))
         ]
+    
+    elif version in ["03", "04", "05", "06", "07"]:
+        
+        discrete_mutual_info_classif = partial(mutual_info_classif, n_neighbors=int(version)-2)
+        steps = [
+            ('preprocessor', preprocessor),
+            ('feature_selection', SelectKBest(score_func=discrete_mutual_info_classif))
+        ]
         
     else:
         raise NotImplementedError
 
-    
     if type_model == "logistic_regression":
         steps.append(
             ('logistic', LogisticRegression(max_iter=10000, random_state=42))

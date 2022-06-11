@@ -1,12 +1,13 @@
 #!/bin/sh
 
-#SBATCH --job-name=svm__v02
+#SBATCH --job-name=svm__v07
+#SBATCH --output=svm__v07-out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
 #SBATCH --partition=shared-cpu
-#SBATCH --time=06:00:00
+#SBATCH --time=04:15:00
 #SBATCH --mem-per-cpu=5000
 
 module load GCCcore/11.2.0 Python/3.9.6
 pip install -r titanic_spaceship_package/requirements.txt
-python script_tuning.py svm__v02
+python script_tuning.py svm__v07

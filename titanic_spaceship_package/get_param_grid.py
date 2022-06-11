@@ -14,7 +14,7 @@ def get_param_grid(model_name):
         
         if version in ["01"]:
             param_grid = param_grid_logistic_regression__basic
-        elif version in ["02"]:
+        elif version in ["02", "03", "04", "05", "06", "07"]:
             param_grid = param_grid_logistic_regression__feature_selection
         else:
             raise NotImplementedError
@@ -23,7 +23,7 @@ def get_param_grid(model_name):
         
         if version in ["01"]:
             param_grid = param_grid_knn__basic
-        elif version in ["02"]:
+        elif version in ["02", "03", "04", "05", "06", "07"]:
             param_grid = param_grid_knn__feature_selection
         else:
             raise NotImplementedError
@@ -32,7 +32,7 @@ def get_param_grid(model_name):
         
         if version in ["01"]:
             param_grid = param_grid_svm__basic
-        elif version in ["02"]:
+        elif version in ["02", "03", "04", "05", "06", "07"]:
             param_grid = param_grid_svm__feature_selection
         else:
             raise NotImplementedError
