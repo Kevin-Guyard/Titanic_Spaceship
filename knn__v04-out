@@ -1,0 +1,15 @@
+Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from -r titanic_spaceship_package/requirements.txt (line 1)) (1.4.2)
+Requirement already satisfied: numpy in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from -r titanic_spaceship_package/requirements.txt (line 2)) (1.22.4)
+Requirement already satisfied: sklearn in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from -r titanic_spaceship_package/requirements.txt (line 3)) (0.0)
+Requirement already satisfied: xgboost in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from -r titanic_spaceship_package/requirements.txt (line 4)) (1.6.1)
+Requirement already satisfied: python-dateutil>=2.8.1 in /opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from pandas->-r titanic_spaceship_package/requirements.txt (line 1)) (2.8.2)
+Requirement already satisfied: pytz>=2020.1 in /opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from pandas->-r titanic_spaceship_package/requirements.txt (line 1)) (2021.1)
+Requirement already satisfied: scikit-learn in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from sklearn->-r titanic_spaceship_package/requirements.txt (line 3)) (1.0.2)
+Requirement already satisfied: scipy in /home/users/g/guyardk/.local/lib/python3.9/site-packages (from xgboost->-r titanic_spaceship_package/requirements.txt (line 4)) (1.8.0)
+Requirement already satisfied: six>=1.5 in /opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from python-dateutil>=2.8.1->pandas->-r titanic_spaceship_package/requirements.txt (line 1)) (1.16.0)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from scikit-learn->sklearn->-r titanic_spaceship_package/requirements.txt (line 3)) (2.2.0)
+Requirement already satisfied: joblib>=0.11 in /opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/lib/python3.9/site-packages (from scikit-learn->sklearn->-r titanic_spaceship_package/requirements.txt (line 3)) (1.0.1)
+WARNING: You are using pip version 21.2.2; however, version 22.1.2 is available.
+You should consider upgrading via the '/opt/ebsofts/Python/3.9.6-GCCcore-11.2.0/bin/python3.9 -m pip install --upgrade pip' command.
+python: can't open file '/home/users/g/guyardk/Kaggle/Titanic_Spaceship/script_tuning.py': [Errno 2] No such file or directory
