@@ -1,0 +1,1 @@
+{"model_name": "svm__v04", "best_score": 0.800187137165322, "best_params": {"feature_selection__k": 21, "svm__C": 4.6415888336127775, "svm__degree": 2, "svm__kernel": "poly"}, "time_to_tune": 226415.50841021482, "score_kaggle": 0.79448}
