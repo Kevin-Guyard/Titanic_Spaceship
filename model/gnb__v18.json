@@ -1,0 +1,1 @@
+{"model_name": "gnb__v18", "best_score": 0.7573935392680344, "best_params": {"gnb__var_smoothing": 0.3511191734215127, "pca__n_components": 8}, "time_to_tune": 1028.211374759672}

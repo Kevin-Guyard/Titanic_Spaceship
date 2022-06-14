@@ -5,6 +5,7 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.feature_selection import SelectKBest, SelectFromModel, f_classif, mutual_info_classif
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.decomposition import PCA
 from titanic_spaceship_package.preprocessor import preprocessor
 from functools import partial
 
@@ -46,6 +47,46 @@ def get_pipeline(model_name):
         steps = [
             ('preprocessor', preprocessor),
             ('feature_selection', SelectFromModel(estimator=RidgeClassifier(random_state=42), threshold=0, prefit=False))
+        ]
+        
+    elif version in ["10"]:
+        
+        steps = [
+            ('preprocessor', preprocessor),
+            ('feature_selection', SelectKBest(score_func=f_classif)),
+            ('pca', PCA(random_state=42))
+        ]
+        
+    elif version in ["11", "12", "13", "14", "15"]:
+        
+        discrete_mutual_info_classif = partial(mutual_info_classif, n_neighbors=int(version)-10)
+        steps = [
+            ('preprocessor', preprocessor),
+            ('feature_selection', SelectKBest(score_func=discrete_mutual_info_classif)),
+            ('pca', PCA(random_state=42))
+        ]
+        
+    elif version in ["16"]:
+        
+        steps = [
+            ('preprocessor', preprocessor),
+            ('feature_selection', SelectFromModel(estimator=RandomForestClassifier(random_state=42, n_jobs=-1), threshold=0, prefit=False)),
+            ('pca', PCA(random_state=42))
+        ]
+        
+    elif version in ["17"]:
+        
+        steps = [
+            ('preprocessor', preprocessor),
+            ('feature_selection', SelectFromModel(estimator=RidgeClassifier(random_state=42), threshold=0, prefit=False)),
+            ('pca', PCA(random_state=42))
+        ]
+        
+    elif version in ["18"]:
+        
+        steps = [
+            ('preprocessor', preprocessor),
+            ('pca', PCA(random_state=42))
         ]
         
     else:
