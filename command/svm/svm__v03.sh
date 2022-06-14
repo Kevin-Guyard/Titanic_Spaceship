@@ -4,8 +4,8 @@
 #SBATCH --output=svm__v03-out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=64
-#SBATCH --partition=shared-cpu
-#SBATCH --time=12:00:00
+#SBATCH --partition=public-cpu
+#SBATCH --time=24:00:00
 #SBATCH --mem-per-cpu=5000
 
 module load GCCcore/11.2.0 Python/3.9.6

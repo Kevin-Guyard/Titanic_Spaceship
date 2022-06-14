@@ -1,0 +1,1 @@
+{"model_name": "gnb__v02", "best_score": 0.7699327219391857, "best_params": {"feature_selection__k": 6, "gnb__var_smoothing": 1.0}, "time_to_tune": 1177.3830597400643, "score_kaggle": 0.76712}
