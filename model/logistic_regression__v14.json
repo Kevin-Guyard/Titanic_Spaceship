@@ -1,0 +1,1 @@
+{"model_name": "logistic_regression__v14", "best_score": 0.7805148389581462, "best_params": {"feature_selection__k": 16, "logistic__C": 10000.0, "logistic__l1_ratio": 0.9, "logistic__penalty": "elasticnet", "logistic__solver": "saga"}, "time_to_tune": 61252.15440893161}

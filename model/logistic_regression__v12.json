@@ -1,0 +1,1 @@
+{"model_name": "logistic_regression__v12", "best_score": 0.7810893527026035, "best_params": {"feature_selection__k": 14, "logistic__C": 0.1, "logistic__penalty": "l2", "logistic__solver": "liblinear"}, "time_to_tune": 57317.05846953388, "score_kaggle": 0.78185}

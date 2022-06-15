@@ -1,0 +1,1 @@
+{"model_name": "knn__v18", "best_score": 0.791213883618947, "best_params": {"knn__n_neighbors": 45, "knn__p": 1, "knn__weights": "uniform", "pca__n_components": 6}, "time_to_tune": 25174.00740528123}

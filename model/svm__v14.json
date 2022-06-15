@@ -1,0 +1,1 @@
+{"model_name": "svm__v14", "best_score": 0.7986917603400233, "best_params": {"feature_selection__k": 18, "svm__C": 2.154434690031882, "svm__kernel": "rbf"}, "time_to_tune": 110920.38874197002}

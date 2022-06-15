@@ -4,7 +4,7 @@
 #SBATCH --output=svm__v03-out
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=128
-#SBATCH --partition=public-cpu
+#SBATCH --partition=shared-cpu
 #SBATCH --time=12:00:00
 #SBATCH --mem-per-cpu=5000
 

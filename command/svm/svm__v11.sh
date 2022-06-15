@@ -3,7 +3,7 @@
 #SBATCH --job-name=svm__v11
 #SBATCH --output=svm__v11-out
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=128
+#SBATCH --cpus-per-task=64
 #SBATCH --partition=shared-cpu
 #SBATCH --time=12:00:00
 #SBATCH --mem-per-cpu=5000
