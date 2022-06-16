@@ -15,7 +15,7 @@ def get_param_iterator(model_name):
         param_iterator = {
             "activate": True,
             "name_iterator": "feature_selection__k",
-            "range_iterator": list(map(int, np.linspace(1, 3, 3)))
+            "range_iterator": list(map(int, np.linspace(1, 27, 27)))
         }
         
     elif version in ["08", "09", "16", "17"]:
