@@ -2,14 +2,14 @@ from sklearn.model_selection import GridSearchCV
 import json
 import os
 
-def hyperparameters_tuning(pipeline, param_grid, model_name, repo_model, X_train, y_train):
+def hyperparameters_tuning_classic(pipeline, param_grid, model_name, repo_model, X_train, y_train):
     
     clf = GridSearchCV(
         estimator=pipeline,
         param_grid=param_grid,
         scoring="accuracy",
         n_jobs=-1,
-        refit=True,
+        refit=False,
         cv=5
     )
     

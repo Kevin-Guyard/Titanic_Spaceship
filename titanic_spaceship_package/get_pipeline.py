@@ -108,6 +108,10 @@ def get_pipeline(model_name):
         steps.append(
             ('gnb', GaussianNB())
         )
+    elif type_model == "random_forest":
+        steps.append(
+            ('random_forest', RandomForestClassifier(random_state=42))
+        )
     else:
         raise NotImplementedError
         
