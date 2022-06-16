@@ -18,7 +18,7 @@ def hyperparameters_tuning_tree(pipeline, param_distrib, param_iterator, model_n
             clf = RandomizedSearchCV(
                 estimator=pipeline,
                 param_distributions=param_distrib,
-                n_iter=200,
+                n_iter=400,
                 scoring='accuracy',
                 refit=False,
                 cv=5,
@@ -47,7 +47,7 @@ def hyperparameters_tuning_tree(pipeline, param_distrib, param_iterator, model_n
         clf = RandomizedSearchCV(
             estimator=pipeline,
             param_distributions=param_distrib,
-            n_iter=200,
+            n_iter=400,
             scoring='accuracy',
             refit=False,
             cv=5,
