@@ -1,1 +1,1 @@
-{"model_name": "knn__v16", "best_score": 0.7899482593530532, "best_params": {"feature_selection__max_features": 22, "knn__n_neighbors": 41, "knn__p": 1, "knn__weights": "uniform"}, "time_to_tune": 87451.08496069908}
+{"model_name": "knn__v16", "best_score": 0.7899482593530532, "best_params": {"feature_selection__max_features": 22, "knn__n_neighbors": 41, "knn__p": 1, "knn__weights": "uniform"}, "time_to_tune": 87451.08496069908, "score_kaggle": 0.78489}

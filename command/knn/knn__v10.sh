@@ -3,7 +3,7 @@
 #SBATCH --job-name=knn__v10
 #SBATCH --output=knn__v10-out
 #SBATCH --ntasks=1
-#SBATCH --cpus-per-task=16
+#SBATCH --cpus-per-task=32
 #SBATCH --partition=shared-cpu
 #SBATCH --time=04:00:00
 #SBATCH --mem-per-cpu=5000
