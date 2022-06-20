@@ -1,0 +1,1 @@
+{"model_name": "random_forest__v06", "best_score": 0.8031776261240307, "best_params": {"random_forest__n_estimators": 1000, "random_forest__min_samples_split": 5, "random_forest__min_samples_leaf": 4, "random_forest__max_depth": 80, "random_forest__bootstrap": true, "feature_selection__k": 18}, "time_to_tune": 226829.54199433324, "score_kaggle": 0.79074}
